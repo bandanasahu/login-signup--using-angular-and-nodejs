@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row" style="margin-top:60px;">
+    <div class="col-md-6 col-md-offset-4">
+      <h3 style="color:#0000ff; text-align: center">Login now to create</h3>
+      
+      <hr class="colorgraph">
+
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <div class="form-group has-error">
+          <input class="form-control input-lg" placeholder="E-mail Address" formControlName="email" name="email" type="text">
+        </div>
+
+        <div class="form-group has-success">
+          <input class="form-control input-lg" placeholder="Password" name="password" formControlName="password" value="" type="password">
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">LogIn</button>
+
+        <br>
+        <p class="text-center" style="text-align: center;">
+          <a routerLink="/register">If Don't Have an Account!!</a>
+        </p>
+
+      </form>
+    </div>
+  </div>
+</div>
