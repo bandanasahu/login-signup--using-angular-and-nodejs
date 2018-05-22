@@ -27,8 +27,10 @@ router.delete('/deleteUser/:id', function (req, res) {
 
 //edit the user details
 router.put('/editUser/:id', function (req, res) {
+	console.log('-----------------response---------');
     userController.update(req, res);
 });
+
 
 
 
